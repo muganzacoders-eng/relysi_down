@@ -9,6 +9,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
       origin: [
+      'https://relysi.com',
       'https://www.relysi.com',
       'https://relysi-on.vercel.app',
       'http://localhost:3000',
@@ -30,4 +31,5 @@ process.on('unhandledRejection', (err) => {
   server.close(() => process.exit(1));
 
 });
+
 
